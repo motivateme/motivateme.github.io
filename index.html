@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Here Link</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container to center the link */
+        .container {
+            display: flex;
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+            height: 100vh; /* Full viewport height */
+        }
+
+        .large-text {
+            font-size: 40px; /* Adjust the font size as needed */
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .container {
+                justify-content: center; /* Horizontally centered */
+                align-items: flex-start; /* Not vertically centered */
+                height: auto; /* Allow container to adjust to content height */
+                padding-top: 20px; /* Add some space from the top */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="https://www.youtube.com/watch?v=JAk41lrWRUU" class="large-text">Click Here.</a>
+    </div>
+
+</body>
+</html>

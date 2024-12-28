@@ -3,44 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Here Link</title>
+    <title>SuccessPath - Achieve Your Goals</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Basic styling for the body */
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
-
-        /* Container to center the link */
         .container {
-            display: flex;
-            justify-content: center; /* Horizontally center */
-            align-items: center; /* Vertically center */
-            height: 100vh; /* Full viewport height */
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-
-        .large-text {
-            font-size: 40px; /* Adjust the font size as needed */
-            font-weight: bold;
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: 3px solid #77b300;
+        }
+        header a {
+            color: #fff;
             text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
         }
-
-        /* Mobile styles */
-        @media (max-width: 768px) {
-            .container {
-                justify-content: center; /* Horizontally centered */
-/*                 align-items: flex-start; /* Not vertically centered */ */
-                height: auto; /* Allow container to adjust to content height */
-                padding-top: 20px; /* Add some space from the top */
-            }
+        .branding {
+            float: left;
+        }
+        .contact-info {
+            float: right;
+            margin-top: 10px;
+        }
+        .lead-form {
+            background: #f4f4f4;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .lead-form input, .lead-form button {
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+        }
+        .cta-button {
+            background: #77b300;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin: 20px 0;
+        }
+        .cta-button:hover {
+            background: #5e8c00;
+        }
+        .content {
+            padding: 50px 0;
+            text-align: center;
+        }
+        .testimonials, .contact {
+            background: #ddd;
+            padding: 30px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="branding">
+                <h1>SuccessPath</h1>
+            </div>
+            <div class="contact-info">
+                <a href="tel:+1234567890">Call Us: +1 (234) 567-890</a>
+                <a href="mailto:info@successpath.com">Email: info@successpath.com</a>
+            </div>
+        </div>
+    </header>
 
-    <div class="container">
-        <a href="https://www.youtube.com/watch?v=JAk41lrWRUU" class="large-text">Click Here.</a>
-    </div>
+    <section class="lead-form">
+        <h2>Ready to Achieve Your Goals?</h2>
+        <p>Join thousands who are transforming their lives with our step-by-step guidance.</p>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <button type="submit" class="cta-button">Get Started Now</button>
+        </form>
+    </section>
 
+    <section class="content container">
+        <h2>Why Choose SuccessPath?</h2>
+        <p>At SuccessPath, we understand that achieving goals requires more than just motivation. Our proven strategies help you break free from procrastination, set realistic goals, and take consistent action every day.</p>
+        <button class="cta-button">Learn More</button>
+        <p>Through personalized coaching and easy-to-follow systems, we’ve helped countless individuals stay on track and achieve results they never thought possible.</p>
+        <button class="cta-button">Join Now</button>
+        <p>SuccessPath is designed for people who are ready to take control of their lives. Whether you're chasing career goals, personal development, or health and fitness milestones – we've got you covered.</p>
+        <button class="cta-button">Start Your Journey</button>
+    </section>
+
+    <section class="testimonials container">
+        <h2>What Our Clients Say</h2>
+        <p>"SuccessPath transformed the way I approach my goals. I’ve achieved more in 6 months than in the past 5 years." – Sarah J.</p>
+        <p>"I struggled with procrastination all my life until I found SuccessPath. The results speak for themselves." – Mike R.</p>
+        <p>"Simple, effective, and life-changing. I highly recommend SuccessPath to anyone serious about achieving their dreams." – Emily W.</p>
+    </section>
+
+    <section class="contact container">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us anytime!</p>
+        <a href="tel:+1234567890">+1 (234) 567-890</a> | <a href="mailto:info@successpath.com">info@successpath.com</a>
+    </section>
 </body>
 </html>

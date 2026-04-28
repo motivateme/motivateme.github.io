@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product</title>
+</head>
+<body>
+
+<h1 id="name"></h1>
+<p id="price"></p>
+
+<button onclick="addToCart()">Add to Cart</button>
+
+<script src="script.js"></script>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+const products = {
+  1: {name: "Product 1", price: 500},
+  2: {name: "Product 2", price: 800}
+};
+
+document.getElementById("name").innerText = products[id].name;
+document.getElementById("price").innerText = "₹" + products[id].price;
+
+function addToCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({id, ...products[id]});
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert("Added to cart");
+
+  // GA4 EVENT
+  // gtag('event', 'add_to_cart', {items: [...]});
+}
+</script>
+
+</body>
+</html>

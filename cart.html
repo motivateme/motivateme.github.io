@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+</head>
+<body>
+
+<h1>Your Cart</h1>
+<div id="cart"></div>
+
+<a href="checkout.html">Checkout</a>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let container = document.getElementById("cart");
+
+cart.forEach((item, index) => {
+  let div = document.createElement("div");
+  div.innerHTML = `
+    ${item.name} - ₹${item.price}
+    <button onclick="removeItem(${index})">Remove</button>
+  `;
+  container.appendChild(div);
+});
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  location.reload();
+
+  // GA4 EVENT
+  // gtag('event', 'remove_from_cart', {...});
+}
+</script>
+
+</body>
+</html>
